@@ -45,6 +45,10 @@ Here is an example snippet from ```docker-compose.yml```:
 
 ```Topic 1``` will have 1 partition and 3 replicas, ```Topic 2``` will have 1 partition and 1 replica.
 
+
+##Tests
+tests are just samples, could&should be improved 
+
 ##Tutorial
 
 [https://github.com/fvigotti/docker-kafka](https://github.com/fvigotti/docker-kafka)
