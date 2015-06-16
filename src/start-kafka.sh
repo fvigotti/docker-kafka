@@ -51,7 +51,7 @@ if [[ -z "$KAFKA_SERVER_PID" ]]; then
     echo 'kafka pid not set, exiting.. '
     exit 0
 fi
-kill -9 $KAFKA_SERVER_PID
+kill $KAFKA_SERVER_PID
 wait $KAFKA_SERVER_PID
 echo 'kafka closed, -wait- exit status ='$?
 
@@ -74,7 +74,7 @@ trap "trapped_exit" SIGKILL
 
 $KAFKA_HOME/bin/kafka-server-start.sh $KAFKA_HOME/config/server.properties &
 KAFKA_SERVER_PID=$!
-
+echo 'kafka broker started with pid: '$KAFKA_SERVER_PID
 # the wile loop should be limited to avoid infinite waiting for kafka to start in case of error in configuration
 #while netstat -lnt | awk '$4 ~ /:9092$/ {exit 1}'; do sleep 1; done
 #

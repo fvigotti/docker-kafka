@@ -3,7 +3,7 @@ set -xe
 
 docker build -t "fvigotti/kafka" ../src
 
-export KAFKA_DEFAULT_PORT=9092
+\export KAFKA_DEFAULT_PORT=9092
 #mkdir -p /tmp/docker_nginx_test
 #cp -Rfp ./shared_volumes /tmp/docker_nginx_test/
 #
