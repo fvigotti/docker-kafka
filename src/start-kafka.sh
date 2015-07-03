@@ -43,6 +43,9 @@ do
   fi
 done
 
+echo "created server properties = "
+cat $KAFKA_HOME/config/server.properties
+
 KAFKA_SERVER_PID=""
 
 stop_kafka(){
