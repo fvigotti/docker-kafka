@@ -2,7 +2,7 @@ FROM fvigotti/docker-fatjdk8
 
 MAINTAINER fvigotti
 
-ENV KAFKA_VERSION="0.8.2.1" SCALA_VERSION="2.10"
+ENV KAFKA_VERSION="0.9.0.0" SCALA_VERSION="2.11"
 
 ADD download-kafka.sh /tmp/download-kafka.sh
 
